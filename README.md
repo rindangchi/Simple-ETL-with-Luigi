@@ -130,6 +130,7 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
 
     ```
 
+   The result from transformation process also saved and stored in the local system in .csv format.
 
    
    
