@@ -170,32 +170,29 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
 
    class LoadData(luigi.Task):
 
-   def requires(self):
-      return TransformData()
+      def requires(self):
+         return TransformData()
 
-   def run(self):
+      def run(self):
+         #read data from transformed data
+         transform_data = pd.read_csv(self.input().path)
 
-    #read data from transformed data
-    transform_data = pd.read_csv(self.input().path)
+      #create engine
+      engine = postgres_engine()
 
-    #create engine
-    engine = postgres_engine()
-
-    #insert to database
-    transform_data.to_sql(name = "mall_customer",
+      #insert to database
+      transform_data.to_sql(name = "mall_customer",
                             con = engine,
                             if_exists = "append",
                             index = False)
 
-
-   def output(self):
-    pass
+      def output(self):
+         pass
   
 
    luigi.build([ExtractData(),
              TransformData(),
              LoadData()], local_scheduler = True)
-
 
    ```
 
