@@ -29,6 +29,22 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
    pip install luigi
 
    ```
+
+   Let's read the .csv data
+
+   ```python
+
+   import luigi 
+   import pandas as pd
+
+   #to check luigi version
+   luigi.__version__
+
+   data = pd.read_csv("marketing_data.csv")
+
+   data
+
+   ```
    
 
    
