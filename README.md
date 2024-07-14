@@ -9,14 +9,14 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
 
 ## Case Objectives
 
-###1. Design ETL pipeline
+1. Design ETL pipeline
    
    Before implemet the real pupleine using python and luigi we will deign the pipeline as a picture to make us easier to understand the flow. Below is the flow to perform the ETL process.
 
    ![draw1](https://github.com/user-attachments/assets/d226b742-36e3-49eb-b60d-9b28099a1347)
 
 
-###2. Implement ETL Pipeline using Luigi
+2. Implement ETL Pipeline using Luigi
    
    2.1. Create extract pipeline for the given marketing data
 
