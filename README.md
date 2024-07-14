@@ -136,4 +136,13 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
    
    2.3. Create Load pipline to load data to the database
 
+   After we transform the data, the last step is to load the data into database system. Here we will use postgresql.
+
+   Before we load the data, of course we need to prepare the database and table. Here, I create new postgresql connection, a database and table using Dbeaver.
+   I create connection named pacmann with localhost: 5432 (default localhost for postgresql), I also create a database named pacmann, and a table named mall_customer.
+
+   ![image](https://github.com/user-attachments/assets/b7ca243d-9ca4-40cd-b6d2-03f682d1c0aa)
+
+   
+   
    
