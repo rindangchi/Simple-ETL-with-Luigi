@@ -45,7 +45,9 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
    data
 
    ```
-   
+
+   ![image](https://github.com/user-attachments/assets/8e165d66-a064-472e-87ea-1e0c59cc7e65)
+
 
    
    
