@@ -96,15 +96,14 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
 
    #class for transform data
 
-class TransformData(luigi.Task):
+   class TransformData(luigi.Task):
 
-  def requires(self):
-    return ExtractData()
+     def requires(self):
+       return ExtractData()
 
-  def run(self):
-    #read data from previous process
-
-    extract_data = pd.read_csv(self.input().path)
+     def run(self):
+       #read data from previous process
+       extract_data = pd.read_csv(self.input().path)
 
     #initialize dictionary fro re-name column
 
@@ -127,7 +126,7 @@ class TransformData(luigi.Task):
     extract_data.to_csv(self.output().path, index=False)
 
     def output(self):
-    return luigi.LocalTarget("/Users/rindangcahyaning/Documents/Bootcamp/PacmannDE/myenv/transform_data.csv")
+       return luigi.LocalTarget("/Users/rindangcahyaning/Documents/Bootcamp/PacmannDE/myenv/transform_data.csv")
 
     ```
 
