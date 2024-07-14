@@ -10,7 +10,7 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
 ## Case Objectives
 
 1. Design ETL pipeline
-
+   
    
 3. Implement ETL Pipeline using Luigi
    2.1. Create extract pipeline for the given marketing data
