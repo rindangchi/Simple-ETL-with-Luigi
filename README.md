@@ -10,7 +10,7 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
 ## Case Objectives
 
 1. Design ETL pipeline
-   Before implemet the real pupleine using python and luigi we will deign the pipline as a picture to make us easier to understand the flow. Below is the flow to perform the ETL process.
+   Before implemet the real pupleine using python and luigi we will deign the pipeline as a picture to make us easier to understand the flow. Below is the flow to perform the ETL process.
 
    ![draw1](https://github.com/user-attachments/assets/d226b742-36e3-49eb-b60d-9b28099a1347)
 
@@ -162,4 +162,41 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
 
    ```
    
+   Finally, we create the Class Load to load the final data to the postgresql database.
+
+   ```python
+
+   #class load data
+
+   class LoadData(luigi.Task):
+
+   def requires(self):
+      return TransformData()
+
+   def run(self):
+
+    #read data from transformed data
+    transform_data = pd.read_csv(self.input().path)
+
+    #create engine
+    engine = postgres_engine()
+
+    #insert to database
+    transform_data.to_sql(name = "mall_customer",
+                            con = engine,
+                            if_exists = "append",
+                            index = False)
+
+
+   def output(self):
+    pass
+  
+
+   luigi.build([ExtractData(),
+             TransformData(),
+             LoadData()], local_scheduler = True)
+
+
+   ```
+
    
