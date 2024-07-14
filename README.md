@@ -138,7 +138,7 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
 
    After we transform the data, the last step is to load the data into database system. Here we will use postgresql.
 
-   Before we load the data, of course we need to prepare the database and table. Here, I create new postgresql connection, a database and table using Dbeaver.
+   Before we load the data, of course we need to prepare the database and table. Here, I create new postgresql connection, a database, table, and all colmns in  Dbeaver.
    I create connection named pacmann with localhost: 5432 (default localhost for postgresql), I also create a database named pacmann, and a table named mall_customer.
 
    ![image](https://github.com/user-attachments/assets/b7ca243d-9ca4-40cd-b6d2-03f682d1c0aa)
@@ -195,5 +195,10 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
              LoadData()], local_scheduler = True)
 
    ```
+
+
+When we back to Dbeaver and check it, all the final data is already in the table.
+
+![image](https://github.com/user-attachments/assets/1b994e6f-063a-4f01-86da-2c9b7db2f508)
 
    
