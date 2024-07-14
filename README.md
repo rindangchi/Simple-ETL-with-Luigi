@@ -143,6 +143,23 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
 
    ![image](https://github.com/user-attachments/assets/b7ca243d-9ca4-40cd-b6d2-03f682d1c0aa)
 
-   
+
+   Before creating Class Load, we need to create a function to connect pandas to the postgresql database.
+
+   ```python
+
+   #create helper function to connect pandas and postgresql
+
+   from sqlalchemy import create_engine
+
+   def postgres_engine():
+
+     engine = create_engine("postgresql://postgres@localhost:5432/pacmann")
+
+     return engine
+
+   engine = postgres_engine()
+
+   ```
    
    
