@@ -15,7 +15,8 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
    ![draw1](https://github.com/user-attachments/assets/d226b742-36e3-49eb-b60d-9b28099a1347)
 
 
-3. Implement ETL Pipeline using Luigi
+2. Implement ETL Pipeline using Luigi
+   
    2.1. Create extract pipeline for the given marketing data
 
    The first step is to extract marketing dataset to understand the data, such as data type, data shape, and column names.
