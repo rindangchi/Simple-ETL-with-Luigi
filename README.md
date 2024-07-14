@@ -50,6 +50,17 @@ Company ABC wants to analyze its marketing data to gain a meaningful insight to 
 
    ![image](https://github.com/user-attachments/assets/8e165d66-a064-472e-87ea-1e0c59cc7e65)
 
+   Next we will analyze the data types for each column:
+
+   ```python
+
+   print(data.dtypes)
+
+   ```
+
+   Here is the data types for each column, from the result we can conclude that all columns are with correct data types
+
+   ![image](https://github.com/user-attachments/assets/027114bb-42e1-47a5-9a6a-794df5ee8557)
 
    
    
